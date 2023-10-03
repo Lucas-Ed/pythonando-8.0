@@ -71,6 +71,7 @@ Confira [aqui em breve.]()
 #### Url's:
 
 http://127.0.0.1:8000/usuarios/cadastro/
+http://127.0.0.1:8000/usuarios/login/
 
 <!-- ## Como executar ?
 É Necessário Node LTS > versão 16, instalado.

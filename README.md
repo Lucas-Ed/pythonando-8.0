@@ -31,7 +31,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-o Projeto é uma aplicação de um laboratório para realização de exames.
+O projeto é uma aplicação de um laboratório com nome Vitalab para realização de exames.
 [Mais detalhes do projeto aqui.](https://grizzly-amaranthus-f6a.notion.site/PSW-8-0-Aula-1-c5f28c09c09f4493ad20911f984e4fc8?pvs=4
 )
 
@@ -72,6 +72,28 @@ Confira [aqui em breve.]()
 
 http://127.0.0.1:8000/usuarios/cadastro/
 http://127.0.0.1:8000/usuarios/login/
+
+
+## Estrutura de pastas
+
+-Vitalab
+├── Exames
+│  └── Migratios(e scripts)
+├── Templates
+│  └── bases
+|      └── Arquivo base .Html 
+|  └── static
+|      └── geral
+|      |    └── css
+|      |    └── img
+|      └── usuarios
+|          └── css
+├── Usuários
+|   └── templates
+|      └── Arquivo.Html 
+├── Vitalab
+|   └── core da aplicação
+└── fim
 
 <!-- ## Como executar ?
 É Necessário Node LTS > versão 16, instalado.

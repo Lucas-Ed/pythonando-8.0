@@ -1,3 +1,15 @@
+
+- Criar ambiente virtual
+
+```bash
+python -m venv venv
+```
+
+- Ativar ambiente virtual do python
+
+```bash
+source venv/Scripts/Activate
+```
 - Executar servidor
 ```bash
 python manage.py runserver

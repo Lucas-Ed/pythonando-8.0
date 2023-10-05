@@ -73,8 +73,10 @@ Confira [aqui em breve.]()
 http://127.0.0.1:8000/usuarios/cadastro/
 <br>
 http://127.0.0.1:8000/usuarios/login/
-
-
+<br>
+http://127.0.0.1:8000/exames/solicitar_exames/
+<br>
+http://127.0.0.1:8000/exames/gerenciar_pedidos/
 <!-- ## Estrutura de pastas
 
 -Vitalab
@@ -84,6 +86,10 @@ http://127.0.0.1:8000/usuarios/login/
 │  └── bases
 |      └── Arquivo base .Html 
 |  └── static
+|      └── exames
+|      |    └── css
+|      |    └── img
+|      |     └── js
 |      └── geral
 |      |    └── css
 |      |    └── img
@@ -101,3 +107,4 @@ http://127.0.0.1:8000/usuarios/login/
 Esse projeto está sob a licença MIT.
 
 ---
+

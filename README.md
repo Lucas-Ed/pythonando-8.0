@@ -32,8 +32,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## 💻 Projeto
 
 O projeto é uma aplicação de um laboratório com nome Vitalab para realização de exames.
-[Mais detalhes do projeto aqui.](https://grizzly-amaranthus-f6a.notion.site/PSW-8-0-Aula-1-c5f28c09c09f4493ad20911f984e4fc8?pvs=4
-)
+[Mais detalhes do projeto aqui.](https://grizzly-amaranthus-f6a.notion.site/PSW-8-0-00bb7eea558d45f696f816b053db94be)
 
 <!-- ## PDF
 [PDF](https://pythonando.com.br/media/recursos_aulas/PSW_8_0_Aula_1_c5f28c09c09f4493ad20911f984e4fc8.pdf) -->

@@ -77,6 +77,12 @@ http://127.0.0.1:8000/usuarios/login/
 http://127.0.0.1:8000/exames/solicitar_exames/
 <br>
 http://127.0.0.1:8000/exames/gerenciar_pedidos/
+<br>
+http://127.0.0.1:8000/exames/gerenciar_exames/
+<br>
+http://127.0.0.1:8000/exames/solicitar_senha_exame/1
+<br>
+http://127.0.0.1:8000/exames/permitir_abrir_exame
 <!-- ## Estrutura de pastas
 
 -Vitalab

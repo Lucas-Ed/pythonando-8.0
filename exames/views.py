@@ -66,3 +66,34 @@ def cancelar_pedido(request, pedido_id):
     pedido.save()
     messages.add_message(request, constants.SUCCESS, 'Pedido excluido com sucesso !!!')
     return redirect('/exames/gerenciar_pedidos/')
+
+@login_required
+def gerenciar_exames(request):
+    exames = SolicitacaoExame.objects.filter(usuario=request.user)
+
+    return render(request, 'gerenciar_exames.html', {'exames': exames})
+
+@login_required
+def permitir_abrir_exame(request, exame_id):
+    exame = SolicitacaoExame.objects.get(id=exame_id)
+		#TODO: validar se o exame é do usuário
+    if not exame.requer_senha:
+        # verificar se o pdf existe
+        return redirect(exame.resultado.url)
+
+    else: 
+        return redirect(f'/exames/solicitar_senha_exame/{exame.id}')
+    
+@login_required
+def solicitar_senha_exame(request, exame_id):
+    exame = SolicitacaoExame.objects.get(id=exame_id)
+    if request.method == "GET":
+        return render(request, 'solicitar_senha_exame.html', {'exame': exame})
+    elif request.method == "POST":
+        senha = request.POST.get("senha")
+				#TODO: validar se o exame é do usuário
+        if senha == exame.senha:
+            return redirect(exame.resultado.url)
+        else:
+            messages.add_message(request, constants.ERROR, 'Senha inválida')
+            return redirect(f'/exames/solicitar_senha_exame/{exame.id}')

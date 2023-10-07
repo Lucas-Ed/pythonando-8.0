@@ -37,3 +37,9 @@ python manage.py migrate
 
 python manage.py createsuperuser
 ```
+
+- Limpar cache no django
+
+```bash
+python manage.py clear_cache
+```

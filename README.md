@@ -82,6 +82,10 @@ http://127.0.0.1:8000/exames/gerenciar_exames/
 http://127.0.0.1:8000/exames/solicitar_senha_exame/1
 <br>
 http://127.0.0.1:8000/exames/permitir_abrir_exame
+<br>
+http://127.0.0.1:8000/exames/gerar_acesso_medico/
+<br>
+http://127.0.0.1:8000/exames/acesso_medico/{self.token}
 <!-- ## Estrutura de pastas
 
 -Vitalab

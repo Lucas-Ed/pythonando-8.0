@@ -91,7 +91,9 @@ http://127.0.0.1:8000/empresarial/gerenciar_clientes
 <br>
 http://127.0.0.1:8000/empresarial/cliente/<int:cliente_id>
 <br>
-http://127.0.0.1:8000/empresarial/exame_cliente/<int:exame_id
+http://127.0.0.1:8000/empresarial/exame_cliente/<int:exame_id>
+<br>
+http://127.0.0.1:8000/empresarial/alterar_dados_exame/<int:exame_id>
 
 
 <!--## Estrutura de pastas

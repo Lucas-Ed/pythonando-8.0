@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.db.models import Value
 from django.db.models.functions import Concat
 from django.contrib.admin.views.decorators import staff_member_required
+from utils import gerar_pdf_exames, gerar_senha_aleatoria
 from exames.models import SolicitacaoExame
 from django.http import FileResponse
 # Create your views here.
@@ -41,3 +42,16 @@ def proxy_pdf(request, exame_id):
 
     response = exame.resultado.open()
     return FileResponse(response)
+
+@staff_member_required 
+def gerar_senha(request, exame_id):
+    exame = SolicitacaoExame.objects.get(id=exame_id)
+
+    if exame.senha:
+        # Baixar o documento da senha já existente
+        return FileResponse(gerar_pdf_exames(exame.exame.nome, exame.usuario, exame.senha), filename="token.pdf")
+    
+    senha = gerar_senha_aleatoria(9)
+    exame.senha = senha
+    exame.save()
+    return FileResponse(gerar_pdf_exames(exame.exame.nome, exame.usuario, exame.senha), filename="token.pdf")

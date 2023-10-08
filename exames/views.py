@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from .models import AcessoMedico, PedidosExames, SolicitacaoExame, TiposExames
 from django.contrib import messages
 from django.contrib.messages import constants
+
 # Create your views here.
 
 @login_required

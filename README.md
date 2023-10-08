@@ -86,6 +86,10 @@ http://127.0.0.1:8000/exames/permitir_abrir_exame
 http://127.0.0.1:8000/exames/gerar_acesso_medico/
 <br>
 http://127.0.0.1:8000/exames/acesso_medico/{self.token}
+<br>
+http://127.0.0.1:8000/empresarial/gerenciar_clientes
+<br>
+http://127.0.0.1:8000/empresarial/cliente/<int:cliente_id>
 <!-- ## Estrutura de pastas
 
 -Vitalab

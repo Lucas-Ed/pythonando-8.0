@@ -90,7 +90,11 @@ http://127.0.0.1:8000/exames/acesso_medico/{self.token}
 http://127.0.0.1:8000/empresarial/gerenciar_clientes
 <br>
 http://127.0.0.1:8000/empresarial/cliente/<int:cliente_id>
-<!-- ## Estrutura de pastas
+<br>
+http://127.0.0.1:8000/empresarial/exame_cliente/<int:exame_id
+
+
+<!--## Estrutura de pastas
 
 -Vitalab
 ├── Exames

@@ -1,6 +1,6 @@
 databases:
   - name: pythonando8
-    databaseName: db.sqlite3
+    databaseName: mysite
     user: lucas
 
 services:

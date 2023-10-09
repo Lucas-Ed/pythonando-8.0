@@ -43,3 +43,12 @@ python manage.py createsuperuser
 ```bash
 python manage.py clear_cache
 ```
+
+
+- Docker
+execute:
+```
+docker build --tag python-django
+
+docker run --publish 8000:8000 python-django
+```

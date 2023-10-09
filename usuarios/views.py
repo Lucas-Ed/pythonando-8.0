@@ -54,7 +54,7 @@ def logar(request):
         if user:
             login(request, user)
 			# Redireciona para página pós login
-            return redirect('/')
+            return redirect('http://127.0.0.1:8000/exames/solicitar_exames/')
         else:
             messages.add_message(request, constants.ERROR, 'Usuario ou senha inválidos')
             return redirect('/usuarios/login')

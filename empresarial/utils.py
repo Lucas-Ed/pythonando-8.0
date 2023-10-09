@@ -5,8 +5,8 @@ from django.conf import settings
 from django.template.loader import render_to_string
 from io import BytesIO
 from weasyprint import HTML
-def gerar_senha_aleatoria(tamanho):
 
+def gerar_senha_aleatoria(tamanho):
     caracteres_especiais = string.punctuation   
     caracteres = string.ascii_letters
     numeros_list = string.digits
@@ -35,8 +35,8 @@ def gerar_senha_aleatoria(tamanho):
 
     return ''.join(senha)
 
-def gerar_pdf_exames(exame, paciente, senha):
 
+def gerar_pdf_exames(exame, paciente, senha):
     path_template = os.path.join(settings.BASE_DIR, 'templates/partials/senha_exame.html')
     template_render = render_to_string(path_template, {'exame': exame, 'paciente': paciente, 'senha': senha})
 

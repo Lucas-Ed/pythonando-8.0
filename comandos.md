@@ -15,6 +15,12 @@ source venv/Scripts/Activate
 python manage.py runserver
 ```
 
+- Gerar arquivo requirements.txt
+
+```bash
+pip freeze > requirements.txt
+```
+
 - Criar um novo app
   ```bash
   python3 manage.py startapp <nome-do-app>

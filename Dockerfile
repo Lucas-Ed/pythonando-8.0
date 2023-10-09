@@ -1,30 +1,24 @@
-# FROM python:3.11
+ARG PYTHON_VERSION=3.11-slim-bullseye
 
-# COPY . /app
+FROM python:${PYTHON_VERSION}
 
-# WORKDIR /app
-
-# RUN pip install -r requirements.txt
-
-# EXPOSE 8000
-
-# CMD python manage.py runserver 0.0.0.0:8000
-
-FROM python:3.11.4-slim-bullseye
-
-WORKDIR /app
-
-ENV PYTHONUNBUFFERED 1
 ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
 
-# install system dependencies
-RUN apt-get update
+RUN mkdir -p /code
 
-# install dependencies
-RUN pip install --upgrade pip
-COPY ./requirements.txt /app/
-RUN pip install -r requirements.txt
+WORKDIR /code
 
-COPY . /app
+COPY requirements.txt /tmp/requirements.txt
+RUN set -ex && \
+    pip install --upgrade pip && \
+    pip install -r /tmp/requirements.txt && \
+    rm -rf /root/.cache/
+COPY . /code
 
-ENTRYPOINT [ "gunicorn", "core.wsgi"]
+ENV SECRET_KEY "Xk7n7kohZI8wjZxhmYHCiMhGx2WWrUdqcdOmKIjQJ6QQEQq6TR"
+RUN python manage.py collectstatic --noinput
+
+EXPOSE 8000
+
+CMD ["gunicorn", "--bind", ":8000", "--workers", "2", "vitalab.wsgi"]

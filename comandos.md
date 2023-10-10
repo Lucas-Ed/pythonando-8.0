@@ -60,3 +60,8 @@ docker run --publish 8000:8000 python-django
 ```
 - Deploy:
 https://blog.back4app.com/how-to-deploy-a-django-application/
+
+- Gerar o css
+```bash
+python manage.py collectstatic
+```

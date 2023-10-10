@@ -77,8 +77,11 @@ def gerenciar_exames(request):
 @login_required
 def permitir_abrir_exame(request, exame_id):
     exame = SolicitacaoExame.objects.get(id=exame_id)
-		#TODO: validar se o exame é do usuário
     if not exame.requer_senha:
+        # Verificar se tem ou não PDF do resultado - Views de exames, def permitir_abrir_exame e solicitar_senha_exame
+        if not exame.resultado:
+            messages.add_message(request, constants.ERROR, 'Ainda não foi cadastrado o seu resultado, entre em contato com o laboratório.')
+            return(redirect('/exames/solicitar_exames'))
         # verificar se o pdf existe
         return redirect(exame.resultado.url)
 

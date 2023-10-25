@@ -75,6 +75,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'vitalab.wsgi.application'
 
+CSRF_TRUSTED_ORIGINS = ['https://pythonando83-1v2rzgj2.b4a.run']
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases

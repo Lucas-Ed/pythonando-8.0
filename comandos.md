@@ -49,7 +49,11 @@ python manage.py createsuperuser
 ```bash
 python manage.py clear_cache
 ```
+- Instalar dependências do requirements.txt:
 
+```bash
+pip install -r requirements.txt
+```
 
 - Docker
 execute:

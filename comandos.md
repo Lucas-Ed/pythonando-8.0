@@ -69,3 +69,7 @@ https://blog.back4app.com/how-to-deploy-a-django-application/
 ```bash
 python manage.py collectstatic
 ```
+
+super user
+user: admin
+password: admin

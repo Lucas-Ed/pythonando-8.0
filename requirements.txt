@@ -1,6 +1,5 @@
 asgiref==3.7.2
 Brotli==1.1.0
-cffi==1.16.0
 cssselect2==0.7.0
 Django==4.2.5
 fonttools==4.43.1

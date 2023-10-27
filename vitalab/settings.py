@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-s=!lr4mhc^fy!g(=(*2=7q3$kn)4)u*gee&(!$t2-5s($y5=gv
 DEBUG = False
 
 #ALLOWED_HOSTS = ["*"]
-ALLOWED_HOSTS = ['.vercel.app','now.sh','127.0.0.1','localhost']
+ALLOWED_HOSTS = ['127.0.0.1','localhost', 'https://pythonando-8-0.onrender.com']
 
 
 # Application definition
@@ -76,27 +76,18 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'vitalab.wsgi.application'
 
-CSRF_TRUSTED_ORIGINS = ['https://pythonando83-1v2rzgj2.b4a.run']
+CSRF_TRUSTED_ORIGINS = ['https://pythonando-8-0.onrender.com']
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
- #DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-#}
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'render',
-        'USER': 'postgres',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
-    }
+     'default': {
+         'ENGINE': 'django.db.backends.sqlite3',
+         'NAME': BASE_DIR / 'db.sqlite3',
+     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

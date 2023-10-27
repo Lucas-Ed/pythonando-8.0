@@ -90,7 +90,7 @@ CSRF_TRUSTED_ORIGINS = ['https://pythonando83-1v2rzgj2.b4a.run']
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
+        'NAME': 'render',
         'USER': 'postgres',
         'PASSWORD': '',
         'HOST': '',

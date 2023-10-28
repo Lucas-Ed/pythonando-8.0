@@ -26,8 +26,8 @@ SECRET_KEY = 'django-insecure-s=!lr4mhc^fy!g(=(*2=7q3$kn)4)u*gee&(!$t2-5s($y5=gv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-#ALLOWED_HOSTS = ["*"]
-ALLOWED_HOSTS = ['127.0.0.1','localhost', 'https://pythonando-8-0.onrender.com']
+ALLOWED_HOSTS = ["*"]
+#ALLOWED_HOSTS = ['127.0.0.1','localhost', 'https://pythonando-8-0.onrender.com']
 
 
 # Application definition
@@ -75,6 +75,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'vitalab.wsgi.application'
+
+PYTHON_VERSION = '3.11.4'
 
 CSRF_TRUSTED_ORIGINS = ['https://pythonando-8-0.onrender.com']
 

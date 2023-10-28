@@ -17,7 +17,7 @@ python manage.py runserver
 
 - Gerar arquivo requirements.txt
 
-```bash
+```bashpython manage.py runserver
 pip freeze > requirements.txt
 ```
 

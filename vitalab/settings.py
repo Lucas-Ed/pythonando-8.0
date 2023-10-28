@@ -9,12 +9,9 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-import dotenv 
+
 from pathlib import Path
 import os
-
-# lê as variáveis de ambiente
-dotenv.load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,12 +20,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'django-insecure-s=!lr4mhc^fy!g(=(*2=7q3$kn)4)u*gee&(!$t2-5s($y5=gv'
 
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
 
-
-
-
-#ALLOWED_HOSTS = ['127.0.0.1','localhost', 'https://pythonando-8-0.onrender.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -75,36 +73,19 @@ TEMPLATES = [
     },
 ]
 
+WSGI_APPLICATION = 'vitalab.wsgi.application'
 
-
-
-
-
+CSRF_TRUSTED_ORIGINS = ['https://pythonando83-1v2rzgj2.b4a.run']
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-#DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-#}
-import dj_database_url
-#import os
-
 DATABASES = {
-    'default': dj_database_url.config(
-        # Feel free to alter this value to suit your needs.
-        default="DATABASE_URL",
-        conn_max_age=600
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
-
-
-
-#db_from_env = dj_database_url.config(default="DATABASE_URL")
-#DATABASES['default'].update(db_from_env)
 
 
 # Password validation

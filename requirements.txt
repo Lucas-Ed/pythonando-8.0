@@ -9,6 +9,7 @@ gunicorn==21.2.0
 html5lib==1.1
 packaging==23.2
 Pillow==10.0.1
+psycopg2-binary==2.9.9
 pycparser==2.21
 pydyf==0.8.0
 pyphen==0.14.0

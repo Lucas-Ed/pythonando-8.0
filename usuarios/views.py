@@ -60,7 +60,7 @@ def logar(request):
         if user:
             login(request, user)
 			# Redireciona para página pós login
-            return redirect('https://pythonando-8-0.onrender.com/exames/solicitar_exames/')
+            return redirect('/exames/solicitar_exames/')
         else:
             messages.add_message(request, constants.ERROR, 'Usuario ou senha inválidos')
             return redirect('/usuarios/login')

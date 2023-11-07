@@ -15,6 +15,10 @@ source venv/Scripts/Activate
 python manage.py runserver
 ```
 
+- Remover migrações
+```bash
+rm */migrations/0*
+```
 - Gerar arquivo requirements.txt
 
 ```bashpython manage.py runserver

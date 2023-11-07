@@ -44,7 +44,7 @@ def cadastro(request):
             return redirect('/usuarios/cadastro')
 
 
-        return redirect('/usuarios/cadastro')
+        return redirect('/usuarios/login')
 
 
 # Função fo login

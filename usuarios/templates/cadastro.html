@@ -17,7 +17,9 @@
             {% endfor %}
         {% endif %}
         <h3 class="font-destaque">Cadastre-se</h3>
-        <a href="{% url 'login' %}" class="cadastro-link voltar">Voltar</a>
+        <div>
+            <a href="{% url 'login' %}" class="cadastro-link voltar">Voltar</a>
+        </div>
         <div class="row">
             <div class="col-md-3" style="text-align: center">
                 <img src="{% static 'geral/img/logo.png'%}" alt="">
@@ -25,7 +27,7 @@
             </div>
 
             <div class="col-md-9">
-                <form action={% url 'cadastro' %} method="POST">{% csrf_token %}
+                <form action="{% url 'cadastro' %}" method="POST">{% csrf_token %}
                 <label>Primeiro nome</label>
                 <br>
                 <input type="text" class="input-default" name="primeiro_nome">
